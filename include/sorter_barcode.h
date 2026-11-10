@@ -32,7 +32,7 @@ extern "C" {
 #define SB_IMPORT
 #endif
 
-/* Library version, e.g. "1.1.1". */
+/* Library version, e.g. "1.1.2". */
 SB_IMPORT const char *sb_version(void);
 
 /* A BMP file (1, 4, 8, 16, 24 or 32 bit, uncompressed). Colour images are read as gray. */
