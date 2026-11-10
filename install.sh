@@ -153,6 +153,6 @@ else
     echo "sorter-barcode $VERSION installato in $PREFIX"
 fi
 case ":$PATH:" in
-    *":$BIN:"*) echo "Per leggere un'immagine:  sorter-barcode /percorso/immagine.bmp" ;;
-    *) echo "Per leggere un'immagine:  $BIN/sorter-barcode /percorso/immagine.bmp   ($BIN non e' nel PATH)" ;;
+    *":$BIN:"*) echo "Per leggere un file:  sorter-barcode /percorso/lettera.pdf" ;;
+    *) echo "Per leggere un file:  $BIN/sorter-barcode /percorso/lettera.pdf   ($BIN non e' nel PATH)" ;;
 esac
