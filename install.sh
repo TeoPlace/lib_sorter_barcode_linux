@@ -40,8 +40,9 @@ ARCH=$(uname -m)
 
 installed() {
     for f in "$LIB"/libsorter_barcode.so.*.*.*; do
-        [ -f "$f" ] && { echo "${f##*.so.}"; return; }
+        [ -f "$f" ] && { echo "${f##*.so.}"; return 0; }
     done
+    return 0
 }
 
 if [ "$UNINSTALL" = 1 ]; then
@@ -84,7 +85,7 @@ if [ "$CHECK" = 1 ]; then
 fi
 
 TMP=""
-cleanup() { [ -n "$TMP" ] && rm -rf "$TMP"; }
+cleanup() { if [ -n "$TMP" ]; then rm -rf "$TMP"; fi; }
 trap cleanup EXIT
 
 if [ "$LOCAL" = 1 ]; then
